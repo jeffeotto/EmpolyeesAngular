@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;500;600&display=swap" rel="stylesheet"> 
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Employees App</h1>
+            </div><!--col-->
+        </div><!--row-->
+        
+        <div class="row">
+           <div class="col">
+            <div class="card">
+                <div class="card-body">
+            <h2>Add Employees</h2>
+                <form >
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text"  class="form-control" id="name" name="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="sname">Second name:</label>
+                    <input type="text" class="form-control" id="sname" name="sname">
+                   </div>
+                   <div class="form-group">
+                    <label for="position">Position:</label>
+                    <input type="text" class="form-control" id="position" name="position">
+                   </div>
+                   <div class="form-group">
+                    <label for="salary">Salary:</label>
+                    <input type="text" class="form-control" id="salary" name="salary">
+                  </div>
+                
+                    <button type="submit" class="btn btn-primary" id="addEmployee" >Submit</button>
+                 </form>
+                 </div>
+                 </div>
+            </div><!--col-->
+           </div><!--row-->
+
+           <div class="row mt-5">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Edit Employees</h2>
+                 <form >
+                    <div class="form-group">
+                        <label for="editId">Id</label>
+                        <input type="text"  class="form-control" id="editId" name="editId">
+                      </div>
+                   <div class="form-group">
+                     <label for="editName">Name</label>
+                     <input type="text"  class="form-control" id="editName" name="editName">
+                   </div>
+                   <div class="form-group">
+                     <label for="editSname">Second name:</label>
+                     <input type="text" class="form-control" id="editSname" name="editSname">
+                    </div>
+                    <div class="form-group">
+                     <label for="editPosition">Position:</label>
+                     <input type="text" class="form-control" id="editPosition" name="editPosition">
+                    </div>
+                    <div class="form-group">
+                     <label for="editSalary">Salary:</label>
+                     <input type="text" class="form-control" id="editSalary" name="editSalary">
+                   </div>
+                 
+                     <button type="submit" class="btn btn-primary" id="editEmployee" >Submit</button>
+                  </form>
+                  </div>
+                  </div>
+             </div><!--col-->
+            </div><!--row-->
+           
+          
+
+        <div class="row mt-5">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Delete Employees</h2>
+                <form >
+                    <div class="form-group">
+                      <label for="nameToDel">Employee ID</label>
+                      <input type="text"  class="form-control" id="nameToDel" name="nameToDel">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="UsersToDel">Delete Users</button>
+                    </form>
+                </div>
+                </div>
+         
+        </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+            <button type="submit" class="btn btn-primary" id="all-Users">Get All Employees</button>
+           <div class="mt-3" id="allusers"></div>
+           </div>
+           </div>
+        </div>
+        </div>
+
+
+        </div><!--Main-row-->
+    </div><!--container-->
+    <script src="/js/site.js"></script>
+</body>
+</html>
