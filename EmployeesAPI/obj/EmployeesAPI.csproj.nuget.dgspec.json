@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jeffeotto\\source\\repos\\EmployeesDBPersistance\\EmployeesDBPersistance\\EMployeesAPI\\EmployeesAPI.csproj": {}
+    "C:\\Users\\jeffeotto\\source\\repos\\EmployeesAngular\\EmployeesAPI\\EmployeesAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jeffeotto\\source\\repos\\EmployeesDBPersistance\\EmployeesDBPersistance\\EMployeesAPI\\EmployeesAPI.csproj": {
+    "C:\\Users\\jeffeotto\\source\\repos\\EmployeesAngular\\EmployeesAPI\\EmployeesAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jeffeotto\\source\\repos\\EmployeesDBPersistance\\EmployeesDBPersistance\\EMployeesAPI\\EmployeesAPI.csproj",
+        "projectUniqueName": "C:\\Users\\jeffeotto\\source\\repos\\EmployeesAngular\\EmployeesAPI\\EmployeesAPI.csproj",
         "projectName": "EmployeesAPI",
-        "projectPath": "C:\\Users\\jeffeotto\\source\\repos\\EmployeesDBPersistance\\EmployeesDBPersistance\\EMployeesAPI\\EmployeesAPI.csproj",
+        "projectPath": "C:\\Users\\jeffeotto\\source\\repos\\EmployeesAngular\\EmployeesAPI\\EmployeesAPI.csproj",
         "packagesPath": "C:\\Users\\jeffeotto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jeffeotto\\source\\repos\\EmployeesDBPersistance\\EmployeesDBPersistance\\EMployeesAPI\\obj\\",
+        "outputPath": "C:\\Users\\jeffeotto\\source\\repos\\EmployeesAngular\\EmployeesAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -45,6 +45,10 @@
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[3.1.9, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

@@ -1,11 +1,144 @@
-<h2>Employee List</h2>
+<a class="btn btn-primary" routerLink="/dashboard">Dashboard</a>
 
-<ul class="list-group">
-    <li class="list-group-item" *ngFor="let employee of employees">
-        <span class="badge badge-info">{{employee.id}}</span>
-        {{employee.name}}
-    </li>
-</ul>
+<h2>Employee List</h2> 
 
-<div>
 
+<!--<ul id="employeeList" class="list-group">
+  <li class="list-group-item" *ngFor="let employee of employees">
+    <a routerLink="/detail/{{employee.id}}">
+      <span class="badge badge-info">{{employee.id}}</span>
+      <p>{{employee.name}} {{employee.secondName}}</p>
+      
+    </a>
+   
+    <button class="btn btn-danger" title="delete hero"
+    (click)="delete(employee)">Delete</button>
+  </li>
+</ul>-->
+
+<div  id="main-list">
+  <div class="row">
+    <div class="col-12 col-md-3">
+      
+      <form>
+        <div class="form-group">
+          <label>Name:
+            <input  type="text" class="form-control" #employeeName />
+          </label> 
+        </div>
+      
+        <div class="form-group">
+          <label>Second Name:
+            <input  type="text" class="form-control" #employeeSecondName />
+          </label>
+        </div>
+    
+        <div class="form-group">
+          <label>Position:
+            <input  type="text" class="form-control"  #employeePosition />
+          </label>
+        </div>
+     
+        <div class="form-group">
+          <label>Salary:
+            <input  type="number" class="form-control"   #employeeSalary />
+          </label>
+        </div>
+      
+      
+        <button class="btn btn-primary" (click)="add(employeeName.value,employeeSecondName.value,employeePosition.value,employeeSalary.value); employeeName.value=''">Add Employee</button>
+    
+      </form>
+    </div>
+    <div class="col-12 col-md-9 ">
+      <div id="accordion">
+        <div class="card" *ngFor="let employee of employees">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0 ">
+              <button class="btn  btn-primary nameEmployee " data-toggle="collapse" [attr.data-target]="'#employee' + employee.id" aria-expanded="true" aria-controls="collapseOne">
+                 {{employee.name}}
+              </button>
+            </h5>
+          </div>
+      
+          <div [id]="'employee' + employee.id" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              <div class="row">
+                <div class="col col-6 ">
+                  <div class="employee-details border">
+                    <h6>Employee Id: {{employee.id}}</h6>
+                    <h6>Employee Name: {{employee.name}}</h6>
+                    <h6>Employee Second Name: {{employee.secondName}}</h6>
+                    <h6>Employee Position: {{employee.position}}</h6>
+                    <h6>Employee Salary: {{employee.salary}}</h6>
+                  </div>
+                 
+      
+                </div>
+                <div class="col col-6">
+                  <form>
+                    <div class="form-group">
+                      <label>Name:
+                        <input [(ngModel)]="employee.name"  type="text" class="form-control"  name="first" />
+                      </label> 
+                    </div>
+                   
+                    <div class="form-group">
+                      <label>Second Name:
+                        <input [(ngModel)]="employee.secondName"  type="text" class="form-control" name="second"  />
+                      </label>
+                    </div>
+                  
+                    <div class="form-group">
+                      <label>Position:
+                        <input [(ngModel)]="employee.position"  type="text" class="form-control"  name="position" />
+                      </label>
+                    </div>
+                   
+                    <div class="form-group">
+                      <label>Salary:
+                        <input [(ngModel)]="employee.salary"  type="number" class="form-control" name="salary"  />
+                      </label>
+                  
+                      
+                    </div>
+                  
+                  <button  class="btn btn-primary editEmp" (click)="save()">Edit Employee</button>
+                  <button class="btn  btn-primary nameEmployee " data-toggle="collapse" [attr.data-target]="'#employee' + employee.id" aria-expanded="true" aria-controls="collapseOne">
+                   Close
+                 </button>
+                 <button  class="btn btn-danger delEmp" title="delete hero"
+                  (click)="delete(employee)">
+                  Delete
+                </button>
+                 
+                 
+                  </form>
+                </div>
+              </div>
+             
+            
+            
+            </div>
+          </div>
+         
+      </div><!--accordion-->
+    </div>
+    
+  </div>
+</div>
+
+
+  
+    
+ 
+     
+
+
+  
+
+
+
+
+
+     

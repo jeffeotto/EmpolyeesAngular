@@ -1,0 +1,45 @@
+
+<div *ngIf="employee">
+  <h2>{{employee.name | uppercase}} Details</h2>
+  
+    <p>Employee id: <strong>{{employee.id}}</strong></p>
+    <p>Employee Name: <strong>{{employee.name}}</strong></p>
+    <p>Employee Second Name: <strong>{{employee.secondName}}</strong></p>
+    <p>Employee Position: <strong>{{employee.position}}</strong></p>
+    <p>Employee Salary: {{employee.salary}}</p>
+    <form>
+      <div class="form-group">
+        <label>Name:
+          <input [(ngModel)]="employee.name"  type="text" class="form-control"  name="first" />
+        </label> 
+      </div>
+     
+      <div class="form-group">
+        <label>Second Name:
+          <input [(ngModel)]="employee.secondName"  type="text" class="form-control" name="second"  />
+        </label>
+      </div>
+    
+      <div class="form-group">
+        <label>Position:
+          <input [(ngModel)]="employee.position"  type="text" class="form-control"  name="position" />
+        </label>
+      </div>
+     
+      <div class="form-group">
+        <label>Salary:
+          <input [(ngModel)]="employee.salary"  type="number" class="form-control" name="salary"  />
+        </label>
+    
+        
+      </div>
+    
+    <button  class="btn btn-primary" (click)="save()">Edit Employee</button>
+    <button  class="btn btn-primary" (click)="goBack()">go back</button>
+    </form>
+</div>
+
+
+
+
+
